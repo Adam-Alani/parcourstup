@@ -4,7 +4,7 @@
 	import NoteForm from './components/NoteForm.svelte';
 	import Result from './components/Result.svelte';
 	import {totalAverage , schools } from "./components/store";
-	import {getAverageSchoolGrade} from "./components/search.ts";
+	import {getAverageSchoolGrade , passingGrade} from "./components/search.ts";
 
 	let searched = false;
 	function search() {
@@ -18,6 +18,7 @@
 	}
 
 </script>
+<style global>body {font-family: "Segoe UI", sans-serif;}</style>
 <Tailwindcss />
 <main class="h-screen text-pblue">
 	<nav class="flex flex-row justify-between items-center mx-12 flex-wrap ">
@@ -33,7 +34,6 @@
 		<div class="">
 			<h1 class=" px-12 font-bold text-2xl  ">Inserez votre Moyenne (/20)</h1>
 			<div class="font-semibold text-xl mt-2 md:grid  md:grid-cols-2  flex-grow  ">
-
 				<div class="px-12 flex flex-col ">
 					<NoteForm subject="EC"/>
 					<NoteForm subject="Francais Ecrit"/>
@@ -43,7 +43,6 @@
 					<NoteForm subject="Philo"/>
 					<NoteForm subject="Grand Oral"/>
 				</div>
-
 			</div>
 			<div class="flex justify-center items-center">
 				<button on:click={search} class="bg-pred rounded-md px-4 py-2 text-xl font-semibold text-white ">Search</button>
@@ -64,14 +63,11 @@
 					</div>
 				</div>
 				{#each $schools as school}
-					<Result ecole={school["School"]} moyenne={getAverageSchoolGrade(school).toFixed(2)}/>
+					<Result ecole={school["School"]} moyenne={getAverageSchoolGrade(school).toFixed(2)} answer={passingGrade(school , $totalAverage)}/>
 				{/each}
 			</div>
 		{/if}
 	</div>
 </main>
-<style global>
-	body {
-		font-family: "Segoe UI", sans-serif;
-	}
-</style>
+
+

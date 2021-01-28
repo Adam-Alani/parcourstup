@@ -1,8 +1,9 @@
 <script lang="ts">
     import Tailwindcss from '../Tailwindcss.svelte';
+    import {average} from "./search.ts";
+    import {averages , totalAverage} from "./store";
     export let subject:string;
     let grade:number;
-    import {averages , totalAverage} from "./store";
 
     function addGrade(){
         if (grade){
@@ -10,18 +11,11 @@
             $averages = $averages;
         }
     }
-    export function average():void {
-        let total = 0;
-        for (let key in $averages) {
-            total += $averages[key];
-        }
-        console.log(Object.keys($averages).length)
-        $totalAverage =  (total / Object.keys($averages).length)
-    }
+
 
     function clickHandler() {
         addGrade();
-        average();
+        $totalAverage = average($averages);
     }
 
 </script>

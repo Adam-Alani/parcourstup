@@ -11,13 +11,11 @@
         $schools = $schools;
         return "Cherchez vos Formations";
     }
-
 </script>
 <Tailwindcss />
-
 <div class="bg-pblue my-10 flex flex-row">
     <section class="py-12 flex-1 ">
-        <div class=" py-2 px-2 ml-12 w-72  text-sm  focus:outline-none">
+        <div class=" py-2 px-2 ml-12 w-72  text-sm  focus:outline-none themed">
             <Select {loadOptions} {optionIdentifier} {getSelectionLabel} {Item}  placeholder="Cherchez vos Formations"></Select>
         </div>
     </section>

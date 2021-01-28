@@ -11,11 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e03d3d28-383e-4559-afb8-2624bb61ea6c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/parseSchools.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/parseSchools.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Item.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Item.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NoteForm.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NoteForm.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +43,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nezqnViqtQtoMy6MpzW1Y5IeMr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -76,12 +80,16 @@
       <workItem from="1611780614777" duration="1797000" />
       <workItem from="1611828386759" duration="676000" />
       <workItem from="1611830900264" duration="2664000" />
-      <workItem from="1611835398021" duration="19473000" />
+      <workItem from="1611835398021" duration="20023000" />
+      <workItem from="1611870014197" duration="3705000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -94,5 +102,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1257" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611872949625">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1257" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611872949625" />
   </component>
 </project>
