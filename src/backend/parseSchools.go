@@ -2,46 +2,60 @@ package main
 
 import (
 	"encoding/csv"
-	"log"
+	"io"
+
+	//"log"
 	"os"
-	"sort"
-	"strings"
 
 	"github.com/gocarina/gocsv"
 )
 
-func schoolReader(filePath string ) [][]string {
-	file, err := os.Open(filePath)
-	if err != nil {
-		log.Fatal("Unable to read input file")
-	}
-	defer file.Close()
+func schoolReader(filePath string) []*Schools {
 
-	reader := csv.NewReader(file)
-	reader.Comma = ';'
-
-	rows , err := reader.ReadAll()
-	if err != nil {
-		log.Fatal("Unable to parse input file")
-	}
-	sort.SliceStable(rows, func(i,j int) bool  {
-		return rows[i][0] < rows[j][0]
+	gocsv.SetCSVReader(func(in io.Reader) gocsv.CSVReader {
+		r := csv.NewReader(in)
+		r.Comma = ';'
+		return r
 	})
-	return rows
-}
 
-
-func filterSchools(typedSchool search , csv [][]string) [][]string {
-	filteredList := make([][]string, 0 ,0)
-	for _ , value := range csv {
-		if strings.Contains(strings.ToUpper(value[0]), strings.ToUpper(typedSchool.SearchedSchool)) {
-			filteredList = append(filteredList, value)
-		}
+	schoolsList, err := os.OpenFile(filePath, os.O_RDWR|os.O_CREATE, os.ModePerm)
+	if err != nil {
+		panic(err)
 	}
-	return filteredList
+	defer schoolsList.Close()
+
+	var clients []*Schools
+
+	if err := gocsv.UnmarshalFile(schoolsList, &clients); err != nil { // Load clients from file
+		panic(err)
+	}
+
+
+	if _, err := schoolsList.Seek(0, 0); err != nil { // Go to the start of the file
+		panic(err)
+	}
+
+	//csvContent, err := gocsv.MarshalString(&clients) // Get all clients as CSV string
+	////err = gocsv.MarshalFile(&clients, schoolsList) // Use this to save the CSV back to the file
+	//if err != nil {
+	//	panic(err)
+	//}
+	// Display all clients as CSV string
+	return clients;
 }
 
-type SchoolCSV struct { // Our example struct, you can use "-" to ignore a field
+
+//func filterSchools(typedSchool search , csv [][]string) [][]string {
+//	filteredList := make([][]string, 0 ,0)
+//	for _ , value := range csv {
+//		if strings.Contains(strings.ToUpper(value[0]), strings.ToUpper(typedSchool.SearchedSchool)) {
+//			filteredList = append(filteredList, value)
+//		}
+//	}
+//	return filteredList
+//}
+
+type Schools struct { // Our example struct, you can use "-" to ignore a field
 	Status      string `csv:"status"`
 	School    string `csv:"school"`
 	CodeDep     string `csv:"codedep"`
@@ -70,4 +84,23 @@ type SchoolCSV struct { // Our example struct, you can use "-" to ignore a field
 
 
 
-
+//
+//func schoolReader(filePath string ) [][]string {
+//	file, err := os.Open(filePath)
+//	if err != nil {
+//		log.Fatal("Unable to read input file")
+//	}
+//	defer file.Close()
+//
+//	reader := csv.NewReader(file)
+//	reader.Comma = ';'
+//
+//	rows , err := reader.ReadAll()
+//	if err != nil {
+//		log.Fatal("Unable to parse input file")
+//	}
+//	sort.SliceStable(rows, func(i,j int) bool  {
+//		return rows[i][0] < rows[j][0]
+//	})
+//	return rows
+//}
