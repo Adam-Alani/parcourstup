@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"net/http"
+	"sort"
 )
 
 func runServer(w http.ResponseWriter, request *http.Request) {
@@ -17,6 +18,7 @@ func runServer(w http.ResponseWriter, request *http.Request) {
 
 	//Filter data according to the body request for autocomplete
 	filtered := filterSchools(selectedSchool, csv)
+	filtered = limitArray(filtered);
 
 
 	//csvContent, err := gocsv.MarshalString(&filtered) // Get all clients as CSV string
@@ -48,4 +50,18 @@ func main() {
 type search struct {
 	SearchedSchool string `json:"school"`
 }
+
+func limitArray(filtered []*Schools)[]*Schools {
+	sort.SliceStable(filtered, func(i,j int) bool  {
+		return filtered[i].School < filtered[j].School})
+
+	if len(filtered) > 20 {
+		filtered = filtered[:20]
+	}
+
+	return filtered
+}
+
+
+
 

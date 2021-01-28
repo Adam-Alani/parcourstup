@@ -6,6 +6,10 @@ export default function loadOptions(filterText) {
             .then(result => result.data)
     }
 }
-
 export const optionIdentifier = "School";
 
+
+
+export function getAverageSchoolGrade(school:object) {
+    return (10.5*school["NoMention"] + 12.5*school["AssezBien"] + 14.5*school["Bien"] + 17*school["TresBien"])/100
+}

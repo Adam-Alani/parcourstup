@@ -4,9 +4,17 @@
 	import NoteForm from './components/NoteForm.svelte';
 	import Result from './components/Result.svelte';
 	import {totalAverage , schools } from "./components/store";
+	import {getAverageSchoolGrade} from "./components/search.ts";
+
 	let searched = false;
 	function search() {
 		searched = true;
+	}
+
+	function schoolAverage() {
+		for (let i = 0; i < $schools.length ; i++) {
+			$schools[i]["Average"] = getAverageSchoolGrade($schools[i]);
+		}
 	}
 
 </script>
@@ -56,7 +64,7 @@
 					</div>
 				</div>
 				{#each $schools as school}
-					<Result ecole={school["School"]} moyenne="14"/>
+					<Result ecole={school["School"]} moyenne={getAverageSchoolGrade(school).toFixed(2)}/>
 				{/each}
 			</div>
 		{/if}

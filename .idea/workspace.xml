@@ -16,8 +16,6 @@
       <change beforePath="$PROJECT_DIR$/src/backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/parseSchools.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/parseSchools.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chips.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chips.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Item.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Item.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +76,7 @@
       <workItem from="1611780614777" duration="1797000" />
       <workItem from="1611828386759" duration="676000" />
       <workItem from="1611830900264" duration="2664000" />
-      <workItem from="1611835398021" duration="17927000" />
+      <workItem from="1611835398021" duration="19473000" />
     </task>
     <servers />
   </component>

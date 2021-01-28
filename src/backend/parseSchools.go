@@ -36,6 +36,12 @@ func schoolReader(filePath string) []*Schools {
 		panic(err)
 	}
 
+	//csvContent, err := gocsv.MarshalString(&clients) // Get all clients as CSV string
+	////err = gocsv.MarshalFile(&clients, schoolsList) // Use this to save the CSV back to the file
+	//if err != nil {
+	//	panic(err)
+	//}
+	// Display all clients as CSV string
 	return clients;
 }
 
@@ -74,3 +80,28 @@ type Schools struct { // Our example struct, you can use "-" to ignore a field
 	TresBien string `csv:"tres_bien"`
 }
 
+
+
+
+
+
+//
+//func schoolReader(filePath string ) [][]string {
+//	file, err := os.Open(filePath)
+//	if err != nil {
+//		log.Fatal("Unable to read input file")
+//	}
+//	defer file.Close()
+//
+//	reader := csv.NewReader(file)
+//	reader.Comma = ';'
+//
+//	rows , err := reader.ReadAll()
+//	if err != nil {
+//		log.Fatal("Unable to parse input file")
+//	}
+//	sort.SliceStable(rows, func(i,j int) bool  {
+//		return rows[i][0] < rows[j][0]
+//	})
+//	return rows
+//}

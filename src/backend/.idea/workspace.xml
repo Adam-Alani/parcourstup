@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parseSchools.go" beforeDir="false" afterPath="$PROJECT_DIR$/parseSchools.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../components/Item.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../components/Item.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../components/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../components/search.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
