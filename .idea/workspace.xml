@@ -11,19 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e03d3d28-383e-4559-afb8-2624bb61ea6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/backend/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/SchoolData.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/parcoursup.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/parseSchools.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NoteForm.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Result.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Item.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/search.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chips.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chips.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/parseSchools.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/parseSchools.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Search.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +31,10 @@
       <list>
         <option value="Search" />
         <option value="Chips" />
-        <option value="TypeScript File" />
         <option value="NoteForm" />
         <option value="Result" />
+        <option value="TypeScript File" />
+        <option value="Item" />
       </list>
     </option>
   </component>
@@ -77,6 +74,7 @@
       <workItem from="1611780614777" duration="1797000" />
       <workItem from="1611828386759" duration="676000" />
       <workItem from="1611830900264" duration="2664000" />
+      <workItem from="1611835398021" duration="9545000" />
     </task>
     <servers />
   </component>
@@ -105,6 +103,10 @@
     </state>
     <state x="18" y="297" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611780980830" />
     <state x="1920" y="340" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1611780421434" />
+    <state x="777" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611843145248">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="777" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611843145248" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1611781036165">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

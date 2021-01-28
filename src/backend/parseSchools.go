@@ -2,10 +2,12 @@ package main
 
 import (
 	"encoding/csv"
-	"fmt"
 	"log"
 	"os"
 	"sort"
+	"strings"
+
+	"github.com/gocarina/gocsv"
 )
 
 func schoolReader(filePath string ) [][]string {
@@ -32,21 +34,40 @@ func schoolReader(filePath string ) [][]string {
 func filterSchools(typedSchool search , csv [][]string) [][]string {
 	filteredList := make([][]string, 0 ,0)
 	for _ , value := range csv {
-		if contains(csv, typedSchool.SearchedSchool) {
+		if strings.Contains(strings.ToUpper(value[0]), strings.ToUpper(typedSchool.SearchedSchool)) {
 			filteredList = append(filteredList, value)
 		}
 	}
-
-	fmt.Print(filteredList)
 	return filteredList
-
 }
 
-func contains(s [][]string, e string) bool {
-	for _, a := range s {
-		if a[0] == e {
-			return true
-		}
-	}
-	return false
+type SchoolCSV struct { // Our example struct, you can use "-" to ignore a field
+	Status      string `csv:"status"`
+	School    string `csv:"school"`
+	CodeDep     string `csv:"codedep"`
+	Department string `csv:"departement"`
+	Region string `csv:"region"`
+	Academy     string `csv:"academie"`
+	Selectivity string `csv:"selectivity"`
+	Filiere string `csv:"filiere"`
+	DetFiliere string `csv:"det_filiere"`
+	Formation string `csv:"formation"`
+	DetFormation string `csv:"formation_det"`
+	VertDetFormation string `csv:"formation_tres_det"`
+	Link string `csv:"link"`
+	Capacity string `csv:"capacity"`
+	total string `csv:"total"`
+	Received string `csv:"recieved_offer"`
+	Accepted string `csv:"accepted_offer"`
+	NoMention string `csv:"no_mention"`
+	AssezBien string `csv:"assez_bien"`
+	Bien string `csv:"bien"`
+	TresBien string `csv:"tres_bien"`
 }
+
+
+
+
+
+
+
