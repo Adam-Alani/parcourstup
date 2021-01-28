@@ -1,14 +1,13 @@
 <script lang="ts">
     import Tailwindcss from '../Tailwindcss.svelte';
-    export let name : string;
-
     import {schools} from "./store";
 
-    function removeSchool() {
+    export let name : string;
+
+    function removeSchool():void {
         $schools = $schools.filter(item => item !== name);
     }
-
-
+    
 </script>
 <Tailwindcss/>
 

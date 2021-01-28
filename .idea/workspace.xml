@@ -11,11 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e03d3d28-383e-4559-afb8-2624bb61ea6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Chips.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/SchoolData.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/parcoursup.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/parseSchools.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NoteForm.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Result.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chips.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chips.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +36,8 @@
         <option value="Search" />
         <option value="Chips" />
         <option value="TypeScript File" />
+        <option value="NoteForm" />
+        <option value="Result" />
       </list>
     </option>
   </component>
@@ -44,6 +54,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="discord-application" />
     <property name="ts.external.directory.path" value="C:\Users\xatom\VSCodeProjects\parcourstup\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -61,6 +72,11 @@
       <option name="presentableId" value="Default" />
       <updated>1611765537493</updated>
       <workItem from="1611765538567" duration="4814000" />
+      <workItem from="1611772746248" duration="7662000" />
+      <workItem from="1611780433645" duration="165000" />
+      <workItem from="1611780614777" duration="1797000" />
+      <workItem from="1611828386759" duration="676000" />
+      <workItem from="1611830900264" duration="2664000" />
     </task>
     <servers />
   </component>
@@ -77,15 +93,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611765867673">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611765867673" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1611767921539">
+    <state x="18" y="297" key="SettingsEditor" timestamp="1611780980830">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611767921539" />
+    <state x="18" y="297" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611780980830" />
+    <state x="1920" y="340" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1611780421434" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1611781036165">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1611781036165" />
   </component>
 </project>

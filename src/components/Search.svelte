@@ -1,16 +1,44 @@
 <script lang="ts">
     import Tailwindcss from '../Tailwindcss.svelte';
     import Chips from './chips.svelte';
-
+    import axios from 'axios';
     import {schools} from "./store";
     let newSchool : string = "";
+    let res = null
+
 
     function addToSchools() {
         newSchool = newSchool.trim();
         if (!newSchool) return;
         $schools = [...$schools, newSchool];
+        if (newSchool.length > 2) {
+            axios({ method: "POST", url: "http://localhost:8090/", data: "newSchool", headers: {"content-type": "text/plain"}}).then(result => {
+                res = result.data;
+                newSchool = res;
+                console.log(newSchool);
+            }).catch( error => {
+                console.error(error);
+            })
+        }
+
+
         newSchool = '';
+
     }
+
+    // setTimeout(()=> {
+    //     if (newSchool.length > 2) {
+    //         axios({ method: "POST", url: "http://localhost:8090/", data: newSchool, headers: {"content-type": "text/plain"}}).then(result => {
+    //             res = result.data;
+    //             newSchool = res;
+    //             console.log(res);
+    //         }).catch( error => {
+    //             console.error(error);
+    //         })
+    //     }
+    // },2000)
+
+
 </script>
 <Tailwindcss />
 
