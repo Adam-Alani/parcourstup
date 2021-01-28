@@ -1,31 +1,11 @@
-import {schools} from "./store";
 import axios from "axios";
 
+export default function loadOptions(filterText) {
+    if (filterText.length >= 3) {
+        return axios({ method: "POST", url: "http://localhost:8090/", data: {school: filterText }, headers: {"content-type": "text/plain"}})
+            .then(result => result.data)
+    }
+}
 
-let newSchool : string = "";
-let res = null
-let start = 0;
-let end = 25;
+export const optionIdentifier = "School"
 
-let items = ["asd","asd"];
-//
-// export default function getBeers(filterText) {
-//     filterText = filterText ? filterText.replace(' ','_') : '';
-//
-//     return new Promise((resolve, reject) => {
-//         const xhr = new XMLHttpRequest();
-//         xhr.open('GET', `https://api.punkapi.com/v2/beers?beer_name=${filterText}`);
-//         xhr.send();
-//
-//         xhr.onload = () => {
-//             if (xhr.status >= 200 && xhr.status < 300) {
-//                 setTimeout(resolve(JSON.parse(xhr.response).sort((a, b) => {
-//                     if (a.name > b.name) return 1;
-//                     if (a.name < b.name) return -1;
-//                 })), 2000);
-//             } else {
-//                 reject()
-//             }
-//         };
-//     });
-// }

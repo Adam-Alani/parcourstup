@@ -3,16 +3,9 @@
 	import Search from './components/Search.svelte'
 	import NoteForm from './components/NoteForm.svelte';
 	import Result from './components/Result.svelte';
-	import {averages } from "./components/store";
+	import {totalAverage } from "./components/store";
+	import {schools} from "./components/store";
 	let avrg = 1;
-
-	function average():void {
-		let total = 0;
-		for (let key in $averages) {
-			total += $averages[key];
-		}
-		avrg = (total / Object.keys($averages).length);
-	}
 
 	let searched = false;
 	function search() {
@@ -50,23 +43,23 @@
 					<NoteForm subject="Philo"/>
 					<NoteForm subject="Grand Oral"/>
 				</div>
-
-				<div class="px-12 flex flex-col">
-					<NoteForm subject="EC1"/>
-					<NoteForm subject="Francais Ecrit1"/>
-					<NoteForm subject="Francais Oral1"/>
-					<NoteForm subject="Spe 1"/>
-					<NoteForm subject="Spe 2"/>
-					<NoteForm subject="Philo"/>
-					<NoteForm subject="Grand Oral"/>
-				</div>
+<!--				<div class="px-12 flex flex-col">-->
+<!--					<NoteForm subject="EC1"/>-->
+<!--					<NoteForm subject="Francais Ecrit1"/>-->
+<!--					<NoteForm subject="Francais Oral1"/>-->
+<!--					<NoteForm subject="Spe 1"/>-->
+<!--					<NoteForm subject="Spe 2"/>-->
+<!--					<NoteForm subject="Philo"/>-->
+<!--					<NoteForm subject="Grand Oral"/>-->
+<!--				</div>-->
 			</div>
 			<div class="flex justify-center items-center">
-			<button on:click={search} class="bg-pred rounded-md px-4 py-2 text-xl font-semibold text-white ">Search</button>
+				<button on:click={search} class="bg-pred rounded-md px-4 py-2 text-xl font-semibold text-white ">Search</button>
+				<h1 class="ml-2 text-pblue font-semibold">Average: {$totalAverage}</h1>
 			</div>
 		</div>
 		{#if searched}
-			<div>
+			<div class="ml-12">
 				<div class="bg-pred rounded-t-xl text-white font-bold text-2xl mr-12">
 					<h1 class="mx-8 py-8">
 						Vous Avez 2 Propositions
@@ -78,11 +71,10 @@
 						<h1 class="mx-8 py-8">Reponse</h1>
 					</div>
 				</div>
-				<Result ecole="EPITA" moyenne="14"/>
-				<Result ecole="EPITA" moyenne="14"/>
-				<Result ecole="EPITA" moyenne="14"/>
-				<Result ecole="EPITA" moyenne="14"/>
-			</div>
+					{#each $schools as school}
+						<Result ecole={school["School"]} moyenne="14"/>
+					{/each}
+				</div>
 		{/if}
 	</div>
 

@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/csv"
 	"io"
+	"strings"
 
 	//"log"
 	"os"
@@ -45,15 +46,15 @@ func schoolReader(filePath string) []*Schools {
 }
 
 
-//func filterSchools(typedSchool search , csv [][]string) [][]string {
-//	filteredList := make([][]string, 0 ,0)
-//	for _ , value := range csv {
-//		if strings.Contains(strings.ToUpper(value[0]), strings.ToUpper(typedSchool.SearchedSchool)) {
-//			filteredList = append(filteredList, value)
-//		}
-//	}
-//	return filteredList
-//}
+func filterSchools(typedSchool search , csv []*Schools) []*Schools {
+	filteredList := make([]*Schools, 0 ,0)
+	for i := range csv {
+		if strings.Contains(strings.ToUpper(csv[i].School), strings.ToUpper(typedSchool.SearchedSchool)) {
+			filteredList = append(filteredList, csv[i])
+		}
+	}
+	return filteredList
+}
 
 type Schools struct { // Our example struct, you can use "-" to ignore a field
 	Status      string `csv:"status"`

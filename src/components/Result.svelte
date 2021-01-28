@@ -1,6 +1,5 @@
 <script lang="ts">
     import Tailwindcss from '../Tailwindcss.svelte';
-
     export let ecole : string;
     export let moyenne : number;
 

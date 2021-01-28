@@ -5,9 +5,8 @@
     export let name : string;
 
     function removeSchool():void {
-        $schools = $schools.filter(item => item !== name);
+        $schools = $schools.filter(item => item["School"] !== name);
     }
-    
 </script>
 <Tailwindcss/>
 
