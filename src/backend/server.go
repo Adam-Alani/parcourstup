@@ -18,8 +18,9 @@ func runServer(w http.ResponseWriter, request *http.Request) {
 	//Filter data according to the body request for autocomplete
 	filtered := filterSchools(selectedSchool, csv)
 
+
 	//csvContent, err := gocsv.MarshalString(&filtered) // Get all clients as CSV string
-	////err = gocsv.MarshalFile(&clients, clientsFile) // Use this to save the CSV back to the file
+	////err = gocsv.MarshalFile(&clients, clientsFile) // Print CSV
 	//if err != nil {
 	//	panic(err)
 	//}

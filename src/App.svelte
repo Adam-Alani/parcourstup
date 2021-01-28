@@ -3,25 +3,17 @@
 	import Search from './components/Search.svelte'
 	import NoteForm from './components/NoteForm.svelte';
 	import Result from './components/Result.svelte';
-	import {totalAverage } from "./components/store";
-	import {schools} from "./components/store";
-	let avrg = 1;
-
+	import {totalAverage , schools } from "./components/store";
 	let searched = false;
 	function search() {
 		searched = true;
-
 	}
-
 
 </script>
 <Tailwindcss />
-
 <main class="h-screen text-pblue">
-
 	<nav class="flex flex-row justify-between items-center mx-12 flex-wrap ">
 		<img src="/images/parcourstup.png" width="400px" height="auto" alt="ParcourStup" >
-
 		<ul class="sm:flex-initial flex font-semibold text-xl  flex-1 justify-around  flex-row   ">
 			<li class="sm:mr-12"><a>Formations</a></li>
 			<li class="sm:mx-12"><a>Calendrier</a></li>
@@ -43,15 +35,7 @@
 					<NoteForm subject="Philo"/>
 					<NoteForm subject="Grand Oral"/>
 				</div>
-<!--				<div class="px-12 flex flex-col">-->
-<!--					<NoteForm subject="EC1"/>-->
-<!--					<NoteForm subject="Francais Ecrit1"/>-->
-<!--					<NoteForm subject="Francais Oral1"/>-->
-<!--					<NoteForm subject="Spe 1"/>-->
-<!--					<NoteForm subject="Spe 2"/>-->
-<!--					<NoteForm subject="Philo"/>-->
-<!--					<NoteForm subject="Grand Oral"/>-->
-<!--				</div>-->
+
 			</div>
 			<div class="flex justify-center items-center">
 				<button on:click={search} class="bg-pred rounded-md px-4 py-2 text-xl font-semibold text-white ">Search</button>
@@ -71,22 +55,13 @@
 						<h1 class="mx-8 py-8">Reponse</h1>
 					</div>
 				</div>
-					{#each $schools as school}
-						<Result ecole={school["School"]} moyenne="14"/>
-					{/each}
-				</div>
+				{#each $schools as school}
+					<Result ecole={school["School"]} moyenne="14"/>
+				{/each}
+			</div>
 		{/if}
 	</div>
-
-
 </main>
-
-
-
-
-
-
-
 <style global>
 	body {
 		font-family: "Segoe UI", sans-serif;

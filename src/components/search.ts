@@ -7,5 +7,5 @@ export default function loadOptions(filterText) {
     }
 }
 
-export const optionIdentifier = "School"
+export const optionIdentifier = "School";
 

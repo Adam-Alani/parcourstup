@@ -13,18 +13,12 @@
     <list default="true" id="e03d3d28-383e-4559-afb8-2624bb61ea6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/.~lock.testData.csv#" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/parseSchools.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/parseSchools.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Chips.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chips.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Item.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Item.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NoteForm.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NoteForm.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Result.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +78,7 @@
       <workItem from="1611780614777" duration="1797000" />
       <workItem from="1611828386759" duration="676000" />
       <workItem from="1611830900264" duration="2664000" />
-      <workItem from="1611835398021" duration="15673000" />
+      <workItem from="1611835398021" duration="17927000" />
     </task>
     <servers />
   </component>
