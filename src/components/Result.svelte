@@ -19,6 +19,8 @@
                 <p class="text-green-500">Cette formation n'est pas selective</p>
             {/if}
         </div>
-        <h1 class="mx-12 py-8">{answer}</h1>
+        {#if !(getAverageSchoolGrade(school) === "-1")}
+            <h1 class="mx-12 py-8">{answer}</h1>
+        {/if}
     </div>
 </div>
