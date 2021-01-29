@@ -7,9 +7,7 @@
 	import {getAverageSchoolGrade , passingGrade , propositionsMessage} from "./components/helpers.ts";
 
 	let searched = false;
-	function search() {
-		searched = true;
-	}
+	function search() {searched = true;}
 
 	function schoolAverage() {
 		for (let i = 0; i < $schools.length ; i++) {
@@ -69,5 +67,3 @@
 		{/if}
 	</div>
 </main>
-
-

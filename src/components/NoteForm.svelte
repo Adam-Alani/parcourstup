@@ -5,16 +5,11 @@
     export let subject:string;
     let grade:number;
 
-    function addGrade(){
+    function clickHandler() {
         if (grade){
             $averages[subject] = grade;
             $averages = $averages;
         }
-    }
-
-
-    function clickHandler() {
-        addGrade();
         $totalAverage = average($averages);
     }
 
