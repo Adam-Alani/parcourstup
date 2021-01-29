@@ -17,7 +17,7 @@
 <Tailwindcss/>
 
 <div class="flex flex-row flex-1">
-    <h1 class="flex-1 my-6">
+    <h1 class="flex-1 my-6 mx-2" >
         {subject}
         <input type=number on:change={clickHandler}  bind:value={grade} min=0 max=20 class="border-2 border-pblue rounded float-right">
     </h1>

@@ -3,7 +3,7 @@
 	import Search from './components/Search.svelte'
 	import NoteForm from './components/NoteForm.svelte';
 	import Result from './components/Result.svelte';
-	import {totalAverage , schools } from "./components/store";
+	import {totalAverage , schools ,exams , footer} from "./components/store";
 	import {getAverageSchoolGrade , passingGrade , propositionsMessage} from "./components/helpers.ts";
 
 	let searched = false;
@@ -22,29 +22,25 @@
 	<nav class="flex flex-row justify-between items-center mx-12 flex-wrap ">
 		<img src="/images/parcourstup.png" width="400px" height="auto" alt="ParcourStup" >
 		<ul class="sm:flex-initial flex font-semibold text-xl  flex-1 justify-around  flex-row   ">
-			<li class="sm:mr-12"><a href="https://dossier.parcoursup.fr/Candidat/carte">Formations</a></li>
-			<li class="sm:mx-12"><a href="https://www.parcoursup.fr/">Calendrier</a></li>
-			<li class="sm:ml-12"><a href="mailto:adamalany@gmail.com">Contact</a></li>
+			<li class="sm:mr-12"><a href="https://dossier.parcoursup.fr/Candidat/carte" target=”_blank”>Formations</a></li>
+			<li class="sm:mx-12"><a href="https://www.parcoursup.fr/" target=”_blank”>Calendrier</a></li>
+			<li class="sm:ml-12"><a href="mailto:adamalany@gmail.com" target=”_blank”>Contact</a></li>
 		</ul>
 	</nav>
 	<Search/>
 	<div class="grid-cols-1 md:grid-cols-2 grid">
-		<div class="">
+		<div>
 			<h1 class=" px-12 font-bold text-2xl  ">Inserez votre Moyenne (/20)</h1>
-			<div class="font-semibold text-xl mt-2 md:grid  md:grid-cols-2  flex-grow  ">
-				<div class="px-12 flex flex-col ">
-					<NoteForm subject="EC"/>
-					<NoteForm subject="Francais Ecrit"/>
-					<NoteForm subject="Francais Oral"/>
-					<NoteForm subject="Spe 1"/>
-					<NoteForm subject="Spe 2"/>
-					<NoteForm subject="Philo"/>
-					<NoteForm subject="Grand Oral"/>
+			<div class="font-semibold text-xl mt-2  flex-grow">
+				<div class="px-12 flex flex-col lg:grid  lg:grid-cols-2">
+					{#each $exams as exam}
+						<NoteForm subject={exam}/>
+					{/each}
 				</div>
 			</div>
 			<div class="flex justify-center items-center">
 				<button on:click={search} class="bg-pred rounded-md px-4 py-2 text-xl font-semibold text-white ">Search</button>
-				<h1 class="ml-2 text-pblue font-semibold">Average: {$totalAverage}</h1>
+				<h1 class="ml-2 text-pblue font-semibold">Moyenne: {$totalAverage}</h1>
 			</div>
 		</div>
 		{#if searched}
@@ -61,9 +57,20 @@
 					</div>
 				</div>
 				{#each $schools as school}
-					<Result ecole={school["School"]} moyenne={getAverageSchoolGrade(school).toFixed(2)} answer={passingGrade(school , $totalAverage)}/>
+					<Result school={school} answer={passingGrade(school , $totalAverage)}/>
 				{/each}
 			</div>
 		{/if}
 	</div>
+
+	<footer class="bg-pblue my-10 flex flex-row text-white font-light px-10 py-10 text-xs">
+		<div>
+		<p> Ce site calcule la probabilite selon les donnees fournis par
+			<a href="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/information/?timezone=Europe%2FBerlin&sort=tri" class="underline" style="color:blue;">
+				Parcoursup
+			</a>.
+			{$footer}
+		</p>
+		</div>
+	</footer>
 </main>
