@@ -13,12 +13,6 @@
     <list default="true" id="e03d3d28-383e-4559-afb8-2624bb61ea6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Item.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Item.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NoteForm.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NoteForm.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Result.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +80,7 @@
       <workItem from="1611870014197" duration="3705000" />
       <workItem from="1611880240871" duration="4056000" />
       <workItem from="1611914060225" duration="6613000" />
+      <workItem from="1611921347778" duration="458000" />
     </task>
     <servers />
   </component>
@@ -106,5 +101,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2381" y="170" key="SettingsEditor" timestamp="1611921454625">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2381" y="170" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1611921454625" />
   </component>
 </project>
