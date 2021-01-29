@@ -2,15 +2,18 @@
     import Tailwindcss from '../Tailwindcss.svelte';
     import Chips from './Chips.svelte';
     import {schools} from "./store";
-    import loadOptions , { optionIdentifier } from "./search.ts";
+    import loadOptions , { optionIdentifier , compareObjects } from "./helpers.ts";
     import Select from 'svelte-select';
     import Item from './Item.svelte';
 
     const getSelectionLabel = (option:object):string => {
-        if (!$schools.includes(option["School"])) $schools.push(option);
-        $schools = $schools;
+        if (compareObjects($schools , option)) {
+            $schools.push(option);
+            $schools = $schools;
+        }
         return "Cherchez vos Formations";
     }
+
 </script>
 <Tailwindcss />
 <div class="bg-pblue my-10 flex flex-row">

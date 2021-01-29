@@ -1,6 +1,6 @@
 <script lang="ts">
     import Tailwindcss from '../Tailwindcss.svelte';
-    import {average} from "./search.ts";
+    import {average} from "./helpers.ts";
     import {averages , totalAverage} from "./store";
     export let subject:string;
     let grade:number;

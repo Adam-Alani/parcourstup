@@ -4,7 +4,7 @@
 	import NoteForm from './components/NoteForm.svelte';
 	import Result from './components/Result.svelte';
 	import {totalAverage , schools } from "./components/store";
-	import {getAverageSchoolGrade , passingGrade} from "./components/search.ts";
+	import {getAverageSchoolGrade , passingGrade , propositionsMessage} from "./components/helpers.ts";
 
 	let searched = false;
 	function search() {
@@ -24,9 +24,9 @@
 	<nav class="flex flex-row justify-between items-center mx-12 flex-wrap ">
 		<img src="/images/parcourstup.png" width="400px" height="auto" alt="ParcourStup" >
 		<ul class="sm:flex-initial flex font-semibold text-xl  flex-1 justify-around  flex-row   ">
-			<li class="sm:mr-12"><a>Formations</a></li>
-			<li class="sm:mx-12"><a>Calendrier</a></li>
-			<li class="sm:ml-12"><a>Contact</a></li>
+			<li class="sm:mr-12"><a href="https://dossier.parcoursup.fr/Candidat/carte">Formations</a></li>
+			<li class="sm:mx-12"><a href="https://www.parcoursup.fr/">Calendrier</a></li>
+			<li class="sm:ml-12"><a href="mailto:adamalany@gmail.com">Contact</a></li>
 		</ul>
 	</nav>
 	<Search/>
@@ -53,7 +53,7 @@
 			<div class="ml-12">
 				<div class="bg-pred rounded-t-xl text-white font-bold text-2xl mr-12">
 					<h1 class="mx-8 py-8">
-						Vous Avez 2 Propositions
+						{propositionsMessage($schools , $totalAverage)}
 					</h1>
 				</div>
 				<div class="bg-pblue text-white font-bold text-xl mr-12">
