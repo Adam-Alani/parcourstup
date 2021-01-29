@@ -10,7 +10,11 @@
     <div class="flex flex-row justify-between">
         <div class="mx-8 py-4 ">
             <a href={school["Link"]} target=”_blank” class="text-xl">{school["School"]}</a>
-            <h3 class="text-pred">Moyenne 2020: {getAverageSchoolGrade(school).toFixed(2)}</h3>
+            {#if getAverageSchoolGrade(school) === "-1"}
+                <h3 class="text-pred">Moyenne pas disponible pour cette formation</h3>
+            {:else}
+                <h3 class="text-pred">Moyenne des mentions au BAC: {getAverageSchoolGrade(school)}</h3>
+            {/if}
             {#if (nonSelectiveSchool(school))}
                 <p class="text-green-500">Cette formation n'est pas selective</p>
             {/if}

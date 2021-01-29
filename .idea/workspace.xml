@@ -12,7 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e03d3d28-383e-4559-afb8-2624bb61ea6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chips.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chips.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Result.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/helpers.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Programming\parcourstup\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\xatom\VSCodeProjects\parcourstup\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -80,7 +81,7 @@
       <workItem from="1611870014197" duration="3705000" />
       <workItem from="1611880240871" duration="4056000" />
       <workItem from="1611914060225" duration="6613000" />
-      <workItem from="1611921347778" duration="607000" />
+      <workItem from="1611921347778" duration="2537000" />
     </task>
     <servers />
   </component>
