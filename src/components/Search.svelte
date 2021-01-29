@@ -1,6 +1,6 @@
 <script lang="ts">
     import Tailwindcss from '../Tailwindcss.svelte';
-    import Chips from './chips.svelte';
+    import Chips from './Chips.svelte';
     import {schools} from "./store";
     import loadOptions , { optionIdentifier } from "./search.ts";
     import Select from 'svelte-select';

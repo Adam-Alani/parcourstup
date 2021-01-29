@@ -11,8 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e03d3d28-383e-4559-afb8-2624bb61ea6c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,7 @@
       <workItem from="1611830900264" duration="2664000" />
       <workItem from="1611835398021" duration="20023000" />
       <workItem from="1611870014197" duration="3705000" />
-      <workItem from="1611880240871" duration="114000" />
+      <workItem from="1611880240871" duration="310000" />
     </task>
     <servers />
   </component>
