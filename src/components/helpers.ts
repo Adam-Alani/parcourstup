@@ -11,13 +11,14 @@ export const optionIdentifier = "Link";
 
 
 export function getAverageSchoolGrade(school:object):string {
+
     if ( school["TresBien"] >= 90) {
         return "16+"
     }
     if (school["NoMention"] +  school["AssezBien"] + school["Bien"] + school["TresBien"] >= 90) {
         return ("-1");
     }
-    return ((10*school["NoMention"] + 12*school["AssezBien"] + 14*school["Bien"] + 16.5*school["TresBien"])/100).toFixed(2).toString();
+    return ((11*parseFloat(school["NoMention"]) + 13*parseFloat(school["AssezBien"]) + 14.5*parseFloat(school["Bien"]) + 16.5*parseFloat(school["TresBien"]))/100).toFixed(2).toString();
 }
 
 export const passingGrade = (school:object , totalAverage):string => {
