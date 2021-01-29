@@ -11,11 +11,15 @@ export const optionIdentifier = "Link";
 
 
 export function getAverageSchoolGrade(school:object):string {
+    let noMention = parseFloat(school["NoMention"]);
+    let assezBien = parseFloat(school["AssezBien"]);
+    let bien = parseFloat(school["Bien"]);
+    let tresBien = parseFloat(school["TresBien"]);
 
     if ( school["TresBien"] >= 90) {
         return "16+"
     }
-    if (school["NoMention"] +  school["AssezBien"] + school["Bien"] + school["TresBien"] >= 90) {
+    if (noMention +  assezBien+  bien + tresBien < 90 || (isNaN(noMention) && isNaN(assezBien) && isNaN(bien) && isNaN(tresBien))) {
         return ("-1");
     }
     return ((11*parseFloat(school["NoMention"]) + 13*parseFloat(school["AssezBien"]) + 14.5*parseFloat(school["Bien"]) + 16.5*parseFloat(school["TresBien"]))/100).toFixed(2).toString();
