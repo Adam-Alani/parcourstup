@@ -6,3 +6,4 @@ Aider a visualiser plus ou moins votre chance d'etre accepte/votre position par 
 
 Frontend built with Svelte, Tailwind and Typescript
 Backend with Go
+Data by Parcoursup 2020
