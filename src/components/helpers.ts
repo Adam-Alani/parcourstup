@@ -1,15 +1,24 @@
 import axios from "axios";
 import {writable} from "svelte/store";
 
-export default function loadOptions(filterText) {
+export default function loadOptions(filterText:string) {
     if (filterText.length >= 2) {
         return axios({ method: "POST", url: "https://parcourstupback.herokuapp.com/", data: {school: filterText }, headers: {"content-type": "text/plain"}})
             .then(result => result.data)
     }
 }
-export const optionIdentifier = "Link";
+export const optionIdentifier = "Link"; /** This const is used to differentiatea the items showed inside of the search
+                                            dropdown  */
 
 
+
+/** Approximate average according to the 2020 School data
+ * Data is made up of the following:
+ *      - "Mention tres bien" : Any grade between 16-20
+ *      - "Mention Bien" : Any grade between 14-16
+ *      - "Mention Assez Bien: Any grade between 12-14
+ *      - "Bac": The passing grade, anything between 10-12
+ * . */
 export function getAverageSchoolGrade(school:object):string {
     let noMention = parseFloat(school["NoMention"]);
     let assezBien = parseFloat(school["AssezBien"]);
@@ -32,6 +41,8 @@ export const passingGrade = (school:object , totalAverage):string => {
    return "Non"
 };
 
+
+/** Calculate weighted average according to the 2021 Baccalaureat specifications. */
 export const average = (averages: { [x: string]: number; }):number => {
     let total:number = 0;
     for (let key in averages) {
@@ -64,6 +75,7 @@ export const average = (averages: { [x: string]: number; }):number => {
     return (total / 100)
 };
 
+
 export function propositionsMessage(schools , totalAverage):string {
     let propositions:number = 0;
     for (let i = 0; i < schools.length ; i++) {
@@ -87,6 +99,7 @@ function propositionsCount(propositions:number):string {
     }
 }
 
+/** Compare objects  */
 export function differentObjects(schools:object[] , option:object):boolean  {
     for (let i = 0 ; i < schools.length ; i++) {
         if (JSON.stringify(schools[i]) == JSON.stringify(option)) {
@@ -97,6 +110,7 @@ export function differentObjects(schools:object[] , option:object):boolean  {
     return true;
 }
 
+/** returns if the school is selective or not. */
 export function nonSelectiveSchool(option:object):boolean {
     return option["Selectivity"] === "formation non sélective";
 }

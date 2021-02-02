@@ -3,13 +3,15 @@
 	import Search from './components/Search.svelte'
 	import NoteForm from './components/NoteForm.svelte';
 	import Result from './components/Result.svelte';
-	import {totalAverage , schools ,exams , footer} from "./components/store";
-	import {getAverageSchoolGrade , passingGrade , propositionsMessage} from "./components/helpers.ts";
+	import { totalAverage, schools, exams, footer } from "./components/store";
+	import { getAverageSchoolGrade, passingGrade, propositionsMessage } from "./components/helpers.ts";
 
 	let searched = false;
+
+	/** Displays Right hand of the page on click */
 	function search() {searched = true;}
 
-	function schoolAverage() {
+	function schoolAverage():void {
 		for (let i = 0; i < $schools.length ; i++) {
 			$schools[i]["Average"] = getAverageSchoolGrade($schools[i]);
 		}

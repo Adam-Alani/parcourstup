@@ -12,8 +12,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e03d3d28-383e-4559-afb8-2624bb61ea6c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Item.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Item.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Result.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Result.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/.~lock.testData.csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chips.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chips.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NoteForm.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NoteForm.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/helpers.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +53,7 @@
     <property name="database.data.extractors.current.id" value="c0c8c257-df3a-4bf4-922f-bd624b784b67" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../chess-app" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\xatom\VSCodeProjects\parcourstup\node_modules\typescript\lib" />
@@ -81,7 +85,12 @@
       <workItem from="1611870014197" duration="3705000" />
       <workItem from="1611880240871" duration="4056000" />
       <workItem from="1611914060225" duration="6613000" />
-      <workItem from="1611921347778" duration="5240000" />
+      <workItem from="1611921347778" duration="5840000" />
+      <workItem from="1612045531029" duration="1031000" />
+      <workItem from="1612102331816" duration="264000" />
+      <workItem from="1612109045000" duration="11000" />
+      <workItem from="1612117537444" duration="851000" />
+      <workItem from="1612286414743" duration="669000" />
     </task>
     <servers />
   </component>
@@ -104,6 +113,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1612109054043">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1612109054043" />
     <state x="2381" y="170" key="SettingsEditor" timestamp="1611921454625">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>

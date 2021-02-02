@@ -1,6 +1,7 @@
 <script lang="ts">
     import Tailwindcss from '../Tailwindcss.svelte';
     import {schools} from "./store";
+
     export let name : string;
 
     function removeSchool():void {
