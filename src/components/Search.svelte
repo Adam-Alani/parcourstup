@@ -16,9 +16,22 @@
 
 </script>
 <Tailwindcss />
-<div class="bg-pblue my-10 flex md:flex-row flex-col">
+<div class="bg-pblue my-10 flex md:flex-row flex-col hidden md:flex">
     <section class="md:py-12 py-2 flex-1">
         <div class=" py-2 px-2 ml-12 w-72  text-sm  focus:outline-none themed">
+            <Select {loadOptions} {optionIdentifier} {getSelectionLabel} {Item}  placeholder="Cherchez vos Formations"></Select>
+        </div>
+    </section>
+    <aside class="flex flex-wrap flex-row justify-start items-center justify-center flex-1 my-2 ">
+        {#each $schools as schoolName}
+            <Chips name={schoolName["School"]}/>
+        {/each}
+    </aside>
+</div>
+
+<div class="bg-pblue my-10 flex flex-col md:hidden items-center justify-center">
+    <section class="py-2 flex-1 items-center justify-center">
+        <div class=" py-2 w-72  text-sm  focus:outline-none themed">
             <Select {loadOptions} {optionIdentifier} {getSelectionLabel} {Item}  placeholder="Cherchez vos Formations"></Select>
         </div>
     </section>
