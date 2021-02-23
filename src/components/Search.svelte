@@ -16,7 +16,7 @@
 
 </script>
 <Tailwindcss />
-<div class="bg-pblue my-10 flex flex-row">
+<div class="bg-pblue my-10 flex md:flex-row flex-col">
     <section class="py-12 flex-1">
         <div class=" py-2 px-2 ml-12 w-72  text-sm  focus:outline-none themed">
             <Select {loadOptions} {optionIdentifier} {getSelectionLabel} {Item}  placeholder="Cherchez vos Formations"></Select>
