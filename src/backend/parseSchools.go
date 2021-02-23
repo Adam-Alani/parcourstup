@@ -2,10 +2,14 @@ package main
 
 import (
 	"encoding/csv"
+	"golang.org/x/text/runes"
 	"io"
 	"strings"
+	"unicode"
 
-	//"log"
+	"golang.org/x/text/transform"
+	"golang.org/x/text/unicode/norm"
+
 	"os"
 
 	"github.com/gocarina/gocsv"
@@ -48,13 +52,36 @@ func schoolReader(filePath string) []*Schools {
 
 func filterSchools(typedSchool search , csv []*Schools) []*Schools {
 	filteredList := make([]*Schools, 0 ,0)
+	searchedList := strings.Fields(typedSchool.SearchedSchool)
 	for i := range csv {
-		if strings.Contains(strings.ToUpper(csv[i].School), strings.ToUpper(typedSchool.SearchedSchool)) {
+		line := removeAccents(csv[i].School + " " + csv[i].DetFormation)
+		if containsSubstring(line , searchedList) {
 			filteredList = append(filteredList, csv[i])
 		}
 	}
 	return filteredList
 }
+
+func containsSubstring(str string , subs []string) bool {
+	for _, sub := range subs {
+		if strings.Contains(strings.ToUpper(str), strings.ToUpper(sub)) {
+
+		} else {
+			return false;
+		}
+	}
+	return true
+}
+
+func removeAccents(s string) string  {
+	t := transform.Chain(norm.NFD, runes.Remove(runes.In(unicode.Mn)), norm.NFC)
+	output, _, e := transform.String(t, s)
+	if e != nil {
+		panic(e)
+	}
+	return output
+}
+
 
 type Schools struct { // Our example struct, you can use "-" to ignore a field
 	Status      string `csv:"status"`
